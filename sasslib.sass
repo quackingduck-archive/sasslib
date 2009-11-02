@@ -1,0 +1,59 @@
+// Basic Positioning
+
+=rel
+  :position relative
+=abs( !top = "auto", !right = "auto", !bottom = "auto", !left = "auto")
+  :position absolute
+  :top= !top
+  :right= !right
+  :bottom= !bottom
+  :left= !left
+=fixed( !top = "auto", !right = "auto", !bottom = "auto", !left = "auto")
+  :position fixed
+  :top= !top
+  :right= !right
+  :bottom= !bottom
+  :left= !left
+
+// Flow
+
+=block
+  :display block
+=inline-block
+  :display block
+=left
+  :float left
+=right
+  :float right
+=clearfix
+  +block
+  &:after
+    +block
+    :content "."
+    :height 0
+    :clear both
+    :visibility hidden
+
+// Alignment
+
+=right-align
+  :text-align right
+=center-align
+  :text-align center
+
+// Boxing
+
+=border-box
+  :-webkit-box-sizing border-box
+
+// Fancy positionin
+
+=abs-center-middle( !width, !height, !padding = 0)
+  +abs(0,0,0,0)
+  :width= !width
+  :margin-left= -(!width/2 + !padding)
+  :height= !height
+  :margin-top= -(!height/2 + !padding)
+  :padding= !padding
+  :left 50%
+  :top 50%
