@@ -4,16 +4,16 @@ caption, center, cite, code,
 dd, del, dfn, div, dl, dt,
 em,
 fieldset, font, form,
-h1, h2, h3, h4, h5, h6, hr, html, 
-i, iframe, img, input, ins, 
-kbd, 
+h1, h2, h3, h4, h5, h6, hr, html,
+i, iframe, img, input, ins,
+kbd,
 label, legend, li,
 object, ol,
-p, pre, 
-q, 
-s, 
+p, pre,
+q,
+s,
 samp, small, span, strike, strong, sub, sup,
-table, tbody, td, tfoot, th, thead, tr, tt,
+table, textarea, tbody, td, tfoot, th, thead, tr, tt,
 u, ul,
 var
   :margin 0
@@ -25,7 +25,7 @@ var
   :background transparent
   :text-align left
 
-body, input
+body, input, button, textarea
   :line-height 1
   :font-family Helvetica
 
@@ -48,9 +48,12 @@ table
   :border-collapse collapse
   :border-spacing 0
 
-input, button
-  :border 1px solid black
+input, textarea
+  :border 1px solid #ccc
+
+button
+  :background #ccc
 
 hr
   :height 1px
-  :background black
+  :background #ccc
